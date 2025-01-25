@@ -34,5 +34,10 @@ message ValidateRequest {
 }
 
 message ValidateResponse {
-    string status = 1;
+    ValidateStatus status = 1;
+}
+
+enum ValidateStatus {
+    OK = 0;
+    FORBIDDEN = 1;
 }
